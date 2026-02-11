@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<script>
+"use strict";
+
+let user = { name: "John" };
+
+let permissions1 = { canView: true };
+let permissions2 = { canEdit: true };
+Object.assign(user, permissions1, permissions2);
+alert(user.name); 
+alert(user.canView);
+alert(user.canEdit); 
+</script>

@@ -1,0 +1,14 @@
+<!doctype html>
+<script>
+    let a= +prompt("num", "");
+    for(let i=2; i<=a; i++){
+        let is=true;
+        for(let j=2; j<i; j++){
+            if(i%j==0){
+            is=false;
+        break;
+    }
+        }
+        if(is)alert(i);
+    }
+    </script> 

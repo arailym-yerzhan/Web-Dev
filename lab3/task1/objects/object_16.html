@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<script>
+"use strict";
+
+let user = {};
+user.me = user;
+
+let clone = structuredClone(user);
+alert(clone.me === clone); 
+</script>

@@ -1,0 +1,17 @@
+<!doctype html>
+<script>
+    "use strict";
+    let p=prompt("who?");
+    if(p=="admin"){
+       let a=prompt("password");
+       if(a=="master"){
+        alert("welcome");
+       }else{
+        alert("NO");
+       }
+    }else if (p!="admin"){
+        alert("i do not know you")
+    }else if(p=="" || p==null){
+        alert("no")
+    }
+    </script>

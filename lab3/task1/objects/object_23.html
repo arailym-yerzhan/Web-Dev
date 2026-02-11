@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<script>
+"use strict";
+function User(name) {
+  if (!new.target) { 
+    return new User(name); 
+  }
+
+  this.name = name;
+}
+
+let john = User("John"); 
+alert(john.name); 
+</script>
