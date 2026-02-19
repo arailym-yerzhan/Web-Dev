@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="image-gallery">
+    <div class="main-image-container">
+      <img [src]="currentImage" [alt]="product.name" class="main-image">
+      <button class="nav-button prev" (click)="prevImage()">❮</button>
+      <button class="nav-button next" (click)="nextImage()">❯</button>
+    </div>
+    <div class="thumbnails">
+      <img *ngFor="let img of product.images; let i = index" 
+           [src]="img" 
+           [alt]="'Thumbnail ' + i"
+           (click)="selectImage(i)"
+           [class.active]="i === currentImageIndex"
+           class="thumbnail">
+    </div>
+  </div>
+
+  <div class="card-content">
+    <h2 class="product-name">{{ product.name }}</h2>
+    <p class="product-description">{{ product.description }}</p>
+    
+    <div class="rating">
+      <span class="stars">{{ renderStars(product.rating) }}</span>
+      <span class="rating-value">({{ product.rating }})</span>
+    </div>
+
+    <div class="price">
+      <span class="price-value">{{ product.price | number:'1.0-0' }} ₸</span>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-primary" (click)="openProduct()">View on Kaspi</button>
+      <div class="share-buttons">
+        <button class="btn btn-share whatsapp" (click)="shareWhatsApp()" title="Share on WhatsApp">WhatsApp</button>
+        <button class="btn btn-share telegram" (click)="shareTelegram()" title="Share on Telegram">Telegram</button>
+      </div>
+    </div>
+  </div>
+</div>
