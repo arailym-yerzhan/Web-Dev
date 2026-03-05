@@ -1,0 +1,31 @@
+<div class="card">
+
+  <h3>{{ movie.title }} ({{ movie.year }})</h3>
+
+  <p>Votes: {{ movie.votes }}</p>
+
+  @if (movie.isWatched) {
+    <span class="watched">Watched ✓</span>
+  } @else {
+    <span class="not-watched">Not Watched</span>
+  }
+
+  <div class="buttons">
+    @if (movie.isWatched){
+      <button class="upvote-btn" (click)="upvote()">
+        👍 {{ movie.votes }}
+      </button>
+
+    }@else{
+      <button class="upvote-btn" disabled>
+
+      </button>
+
+    }
+
+    <button class="remove-btn" (click)="remove()">
+      Remove
+    </button>
+  </div>
+
+</div>
