@@ -1,0 +1,35 @@
+.home-container {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.home-container h1 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.home-container p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+}
