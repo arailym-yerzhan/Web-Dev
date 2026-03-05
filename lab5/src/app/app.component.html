@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="container">
+    <h1>{{ title }}</h1>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="categories">
+      @for (category of categories(); track category.id) {
+        <button 
+          class="category-btn"
+          [class.active]="selectedCategoryId() === category.id"
+          (click)="selectCategory(category.id)">
+          {{ category.name }}
+        </button>
+      }
+    </div>
+
+    @if (selectedCategoryId() !== null) {
+      <app-product-list [products]="products()"></app-product-list>
+    } @else {
+      <div class="welcome-message">
+        <h2>Welcome to our store!</h2>
+        <p>Select a category to see products</p>
+      </div>
+    }
+  </div>
+</main>

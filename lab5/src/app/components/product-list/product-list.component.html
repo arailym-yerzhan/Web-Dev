@@ -1,0 +1,16 @@
+<div class="container">
+  @if (localProducts().length > 0) {
+    <div class="products-grid">
+      @for (product of localProducts(); track product.id) {
+        <app-product-card 
+          [product]="product" 
+          (delete)="onDeleteProduct($event)">
+        </app-product-card>
+      }
+    </div>
+  } @else {
+    <div class="no-products">
+      <p>No products in this category</p>
+    </div>
+  }
+</div>
